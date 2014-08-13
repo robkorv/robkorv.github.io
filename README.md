@@ -14,10 +14,10 @@ Build with [jekyll](https://github.com/jekyll/jekyll)
 git clone https://github.com/robkorv/robkorv-web.git
 cd robkorv-web
 bundle install
-jekyll server
+jekyll serve
 ```
 
-Open http://localhost:4000.
+Open [localhost:4000](http://localhost:4000).
 
 ## develop
 
@@ -38,5 +38,5 @@ bundle install --binstubs .bundle/bin
 guard
 ```
 
-Open http://localhost:4000. When you edit source files the browser automatically
+Open [localhost:4000](http://localhost:4000). When you edit source files the browser automatically
 reloads. Use `q` followed by `enter` to leave guard
