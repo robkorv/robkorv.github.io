@@ -1,11 +1,12 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: over mij
+permalink: /over-mij/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+![Robbert Korving](http://www.gravatar.com/avatar/aeafc56732e71e102cf58a68e08cd3fc)
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Ik vind het leuk om met open-source software en op open standaarden te werken.
+Zo draai ik [Ubuntu Desktop](http://www.ubuntu.com/desktop) als primair
+besturingssysteem en is deze website
+[open-source](https://github.com/robkorv/robkorv-web).
