@@ -39,4 +39,4 @@ guard
 ```
 
 Open http://localhost:4000. When you edit source files the browser automatically
-reloads.
+reloads. Use `q` followed by `enter` to leave guard
