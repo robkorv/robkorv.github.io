@@ -1,7 +1,17 @@
 robkorv-web
 ===========
 
-Build with [jekyll](https://github.com/jekyll/jekyll).
+## uses
 
-* Clone repository
-* `jekyll serve`
+* [rbenv](https://github.com/sstephenson/rbenv)
+* [jekyll](https://github.com/jekyll/jekyll)
+* [bundler](https://github.com/bundler/bundler/)
+
+## run
+
+```bash
+clone https://github.com/robkorv/robkorv-web.git
+cd robkorv-web
+bundle install --binstubs .bundle/bin
+jekyll serve
+```
