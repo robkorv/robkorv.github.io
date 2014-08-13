@@ -10,7 +10,7 @@ robkorv-web
 ## run
 
 ```bash
-clone https://github.com/robkorv/robkorv-web.git
+git clone https://github.com/robkorv/robkorv-web.git
 cd robkorv-web
 bundle install --binstubs .bundle/bin
 jekyll serve
