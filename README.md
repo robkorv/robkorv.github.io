@@ -3,6 +3,7 @@ robkorv-web
 
 ## uses
 
+* [editorconfig](http://editorconfig.org/)
 * [rbenv](https://github.com/sstephenson/rbenv)
 * [jekyll](https://github.com/jekyll/jekyll)
 * [bundler](https://github.com/bundler/bundler/)
@@ -13,5 +14,5 @@ robkorv-web
 git clone https://github.com/robkorv/robkorv-web.git
 cd robkorv-web
 bundle install --binstubs .bundle/bin
-jekyll serve
+guard
 ```
