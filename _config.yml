@@ -9,12 +9,18 @@ baseurl: ""
 url: "https://robkorv.nl"
 twitter_username: robkorv
 github_username:  robkorv
+production: true
 
 # render settings
 markdown: kramdown
 kramdown:
   enable_coderay: false
 highlighter: rouge
+
+# output settings
+permalink: /:title
+sass:
+    style: :compressed
 
 # do not render
 exclude:

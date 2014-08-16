@@ -1,0 +1,6 @@
+# site settings
+production: false
+
+# output settings
+sass:
+    style: :nested
