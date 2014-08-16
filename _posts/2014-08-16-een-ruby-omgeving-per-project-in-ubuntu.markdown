@@ -97,6 +97,50 @@ bundle install --binstubs .bundle/bin
 Hierdoor kunnnen de commando's die bundler installeert zonder `bundle exec`
 aangeroepen worden.
 
+### rbenv updaten
+
+```bash
+# update rbenv en alle geinstalleerde plugins
+rbenv update
+# updating rbenv
+#  |  Already on 'master'
+#  |  Your branch is up-to-date with 'origin/master'.
+#  |  From https://github.com/sstephenson/rbenv
+#  |  * branch            master     -> FETCH_HEAD
+#  |  Already up-to-date.
+#
+# updating rbenv-binstubs
+#  |  Already on 'master'
+#  |  Your branch is up-to-date with 'origin/master'.
+#  |  From https://github.com/ianheggie/rbenv-binstubs
+#  |  * branch            master     -> FETCH_HEAD
+#  |  Already up-to-date.
+#
+# updating rbenv-gem-rehash
+#  |  Already on 'master'
+#  |  Your branch is up-to-date with 'origin/master'.
+#  |  From https://github.com/sstephenson/rbenv-gem-rehash
+#  |  * branch            master     -> FETCH_HEAD
+#  |  Already up-to-date.
+#
+# updating rbenv-update
+#  |  Already on 'master'
+#  |  Your branch is up-to-date with 'origin/master'.
+#  |  From https://github.com/rkh/rbenv-update
+#  |  * branch            master     -> FETCH_HEAD
+#  |  Already up-to-date.
+#
+# updating ruby-build
+#  |  Already on 'master'
+#  |  Your branch is up-to-date with 'origin/master'.
+#  |  From https://github.com/sstephenson/ruby-build
+#  |  * branch            master     -> FETCH_HEAD
+#  |  Already up-to-date.
+#
+# reloading rbenv
+#  |  done
+```
+
 ---
 ## lees meer
 [rbenv](https://github.com/sstephenson/rbenv)  
