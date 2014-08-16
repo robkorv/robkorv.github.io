@@ -9,4 +9,69 @@ Met de volgende instructies kan een Ruby ontwikkel omgeving op directory niveau
 ingesteld worden, onafhankelijk van Ubuntu's package manager. Hiermee voorkom je
 de situatie dat een project een Ruby versie nodig heeft, die niet wordt
 aangeboden door de packagemanager. Een ander groot voordeel is dat
-verschillende Ruby versies onafhankelijk van elkaar gebruikt kunnen worden.
+verschillende Ruby versies naast elkaar gebruikt kunnen worden.
+
+## rbenv en plugins installeren
+
+1. clone de repositories naar de juiste directories.
+
+  ```bash
+  git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+  git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+  git clone https://github.com/ianheggie/rbenv-binstubs.git ~/.rbenv/plugins/rbenv-binstubs
+  git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
+  ```
+
+2. voeg het volgende toe aan `~/.bashrc`.
+
+  ```bash
+  # rbenv
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+  ```
+
+3. sluit de huidige terminal en start een nieuwe. Test het commando `rbenv`.
+
+  ```bash
+  rbenv
+  # rbenv 0.4.0-98-g13a474c
+  # Usage: rbenv <command> [<args>]
+  #
+  # Some useful rbenv commands are:
+  #    commands    List all available rbenv commands
+  #    local       Set or show the local application-specific Ruby version
+  #    global      Set or show the global Ruby version
+  #    shell       Set or show the shell-specific Ruby version
+  #    install     Install a Ruby version using ruby-build
+  #    uninstall   Uninstall a specific Ruby version
+  #    rehash      Rehash rbenv shims (run this after installing executables)
+  #    version     Show the current Ruby version and its origin
+  #    versions    List all Ruby versions available to rbenv
+  #    which       Display the full path to an executable
+  #    whence      List all Ruby versions that contain the given executable
+  #
+  # See `rbenv help <command>' for information on a specific command.
+  # For full documentation, see: https://github.com/sstephenson/rbenv#readme
+  ```
+
+## rbenv gebruiken
+
+### ruby installeren
+
+```bash
+# geeft alle installeerbare ruby versies weer
+rbenv install -l
+# installeert ruby versie 2.1.2
+rbenv install 2.1.2
+```
+
+
+
+---
+### lees meer
+[rbenv](https://github.com/sstephenson/rbenv)  
+[ruby-build](https://github.com/sstephenson/ruby-build)  
+[rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash)  
+[rbenv-binstubs](https://github.com/ianheggie/rbenv-binstubs)  
+[rbenv-update](https://github.com/rkh/rbenv-update)
