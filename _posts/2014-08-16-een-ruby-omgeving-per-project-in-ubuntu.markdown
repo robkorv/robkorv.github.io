@@ -66,10 +66,39 @@ rbenv install -l
 rbenv install 2.1.2
 ```
 
+### ruby versie gebruiken
 
+Ga naar de root directory van het project waar je een bepaalde ruby versie wilt
+gebruiken.
+
+```bash
+cd mijn-app
+# geeft geinstalleerde ruby versies weer
+rbenv versions
+# gebruik ruby versie 2.1.2 in deze en bovenliggende directories
+rbenv local 2.1.2
+# geeft de actieve ruby in deze directory weer
+rbenv version
+```
+
+Het command `rbenv local 2.1.2` creeërt een `.ruby-version` bestand in de huidige
+directory. Hierin wordt de ruby versie opgeslagen. Voeg dit bestand toe aan
+versiebeheer zodat de ruby versie wordt opgelagen in het project.
+
+### bundler gebruiken
+
+Als bundler binnen het project wordt gebruikt roep de `install` dan op de volgende
+wijze aan.
+
+```bash
+bundle install --binstubs .bundle/bin
+```
+
+Hierdoor kunnnen de commando's die bundler installeert zonder `bundle exec`
+aangeroepen worden.
 
 ---
-### lees meer
+## lees meer
 [rbenv](https://github.com/sstephenson/rbenv)  
 [ruby-build](https://github.com/sstephenson/ruby-build)  
 [rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash)  
