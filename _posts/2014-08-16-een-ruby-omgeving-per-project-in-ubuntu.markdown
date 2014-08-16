@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Een Ruby omgeving per project in Ubuntu"
+title:  "Een ruby omgeving per project in Ubuntu"
 date:   2014-08-16 14:31:26
 categories: ruby ubuntu
 ---
@@ -60,10 +60,10 @@ verschillende Ruby versies naast elkaar gebruikt kunnen worden.
 ### ruby installeren
 
 ~~~bash
-# geeft alle installeerbare ruby versies weer
 rbenv install -l
-# installeert ruby versie 2.1.2
+# geeft alle installeerbare ruby versies weer
 rbenv install 2.1.2
+# installeert ruby versie 2.1.2
 ~~~
 
 ### ruby versie gebruiken
@@ -73,12 +73,12 @@ gebruiken.
 
 ~~~bash
 cd mijn-app
-# geeft geinstalleerde ruby versies weer
 rbenv versions
-# gebruik ruby versie 2.1.2 in deze en bovenliggende directories
+# geeft geinstalleerde ruby versies weer
 rbenv local 2.1.2
-# geeft de actieve ruby in deze directory weer
+# gebruik ruby versie 2.1.2 in deze en bovenliggende directories
 rbenv version
+# geeft de actieve ruby in deze directory weer
 ~~~
 
 Het command `rbenv local 2.1.2` creeërt een `.ruby-version` bestand in de huidige
@@ -100,7 +100,6 @@ aangeroepen worden.
 ### rbenv updaten
 
 ~~~bash
-# update rbenv en alle geinstalleerde plugins
 rbenv update
 # updating rbenv
 #  |  Already on 'master'
