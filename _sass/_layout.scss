@@ -2,7 +2,6 @@
  * Site header
  */
 .site-header {
-    text-transform: capitalize;
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
@@ -199,7 +198,6 @@
 }
 
 .post-title {
-    text-transform: capitalize;
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
