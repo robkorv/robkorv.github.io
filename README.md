@@ -10,12 +10,12 @@ Build with [jekyll](https://github.com/jekyll/jekyll)
 
 ## run
 
-```bash
+~~~bash
 git clone https://github.com/robkorv/robkorv-web.git
 cd robkorv-web
 bundle install
 jekyll serve
-```
+~~~
 
 Open [localhost:4000](http://localhost:4000).
 
@@ -31,12 +31,12 @@ ruby environment. The following rbenv plugins are highly recommended:
 Use an editor that has support for [editorconfig](http://editorconfig.org/). I
 use [atom](https://github.com/atom/atom).
 
-```bash
+~~~bash
 git clone https://github.com/robkorv/robkorv-web.git
 cd robkorv-web
 bundle install --binstubs .bundle/bin
 guard
-```
+~~~
 
 Open [localhost:4000](http://localhost:4000). When you edit source files the
 browser automatically reloads. Use `q` followed by `enter` to leave guard.

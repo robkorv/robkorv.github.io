@@ -12,6 +12,9 @@ github_username:  robkorv
 
 # render settings
 markdown: kramdown
+kramdown:
+  enable_coderay: false
+highlighter: rouge
 
 # do not render
 exclude:
