@@ -22,7 +22,7 @@ Open [localhost:4000](http://localhost:4000).
 ## develop
 
 I recommend you use [rbenv](https://github.com/sstephenson/rbenv) to setup a
-ruby environment. The following rbenv plugins are highly recommended:
+ruby environment. The following rbenv plugins are highly recommended:  
 [rbenv-binstubs](https://github.com/ianheggie/rbenv-binstubs)  
 [rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash)  
 [rbenv-update](https://github.com/rkh/rbenv-update)  
