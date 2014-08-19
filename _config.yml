@@ -12,7 +12,7 @@ github_username:  robkorv
 production: true
 
 # render settings
-markdown: kramdown
+markdown: redcarpet
 
 # output settings
 permalink: /:title
