@@ -13,6 +13,7 @@ production: true
 
 # render settings
 markdown: redcarpet
+highlight: ruby
 
 # output settings
 permalink: /:title
