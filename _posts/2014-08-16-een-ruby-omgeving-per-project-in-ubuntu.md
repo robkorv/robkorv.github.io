@@ -15,25 +15,25 @@ verschillende Ruby versies naast elkaar gebruikt kunnen worden.
 
 1.  clone de repositories naar de juiste directories.
 
-    ~~~bash
+    ```bash
     git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
     git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
     git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
     git clone https://github.com/ianheggie/rbenv-binstubs.git ~/.rbenv/plugins/rbenv-binstubs
     git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
-    ~~~
+    ```
 
 2.  voeg het volgende toe aan `~/.bashrc`.
 
-    ~~~bash
+    ```bash
     # rbenv
     export PATH="$HOME/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
-    ~~~
+    ```
 
 3.  sluit de huidige terminal en start een nieuwe. Test het commando `rbenv`.
 
-    ~~~bash
+    ```bash
     rbenv
     # rbenv 0.4.0-98-g13a474c
     # Usage: rbenv <command> [<args>]
@@ -53,25 +53,25 @@ verschillende Ruby versies naast elkaar gebruikt kunnen worden.
     #
     # See `rbenv help <command>' for information on a specific command.
     # For full documentation, see: https://github.com/sstephenson/rbenv#readme
-    ~~~
+    ```
 
 ## rbenv gebruiken
 
 ### ruby installeren
 
-~~~bash
+```bash
 rbenv install -l
 # geeft alle installeerbare ruby versies weer
 rbenv install 2.1.2
 # installeert ruby versie 2.1.2
-~~~
+```
 
 ### ruby versie gebruiken
 
 Ga naar de root directory van het project waar je een bepaalde ruby versie wilt
 gebruiken.
 
-~~~bash
+```bash
 cd mijn-app
 rbenv versions
 # geeft geinstalleerde ruby versies weer
@@ -79,7 +79,7 @@ rbenv local 2.1.2
 # gebruik ruby versie 2.1.2 in deze en bovenliggende directories
 rbenv version
 # geeft de actieve ruby in deze directory weer
-~~~
+```
 
 Het command `rbenv local 2.1.2` creeërt een `.ruby-version` bestand in de huidige
 directory. Hierin wordt de ruby versie opgeslagen. Voeg dit bestand toe aan
@@ -90,16 +90,16 @@ versiebeheer zodat de ruby versie wordt opgelagen in het project.
 Als bundler binnen het project wordt gebruikt roep de `install` dan op de volgende
 wijze aan.
 
-~~~bash
+```bash
 bundle install --binstubs .bundle/bin
-~~~
+```
 
 Hierdoor kunnnen de commando's die bundler installeert zonder `bundle exec`
 aangeroepen worden.
 
 ### rbenv updaten
 
-~~~bash
+```bash
 rbenv update
 # updating rbenv
 #  |  Already on 'master'
@@ -138,7 +138,7 @@ rbenv update
 #
 # reloading rbenv
 #  |  done
-~~~
+```
 
 ---
 
