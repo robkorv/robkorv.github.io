@@ -14,6 +14,9 @@ production: true
 # render settings
 markdown: redcarpet
 highlight: ruby
+redcarpet:
+  extensions:
+    - with_toc_data
 
 # output settings
 permalink: /:title
