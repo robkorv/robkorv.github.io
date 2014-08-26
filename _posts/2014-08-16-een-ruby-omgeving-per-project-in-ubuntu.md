@@ -142,7 +142,7 @@ rbenv update
 
 ---
 
-## lees meer
+### lees meer
 
 [rbenv](https://github.com/sstephenson/rbenv)  
 [ruby-build](https://github.com/sstephenson/ruby-build)  
