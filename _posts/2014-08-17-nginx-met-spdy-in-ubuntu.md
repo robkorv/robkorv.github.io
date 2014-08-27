@@ -29,6 +29,8 @@ repository verouderd is.
 sudo add-apt-repository ppa:nginx/stable
 # package list updaten
 sudo apt-get update
+# nginx installeren
+sudo apt-get install nginx
 ```
 
 ---
