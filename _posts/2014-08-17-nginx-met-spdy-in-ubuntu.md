@@ -2,7 +2,7 @@
 layout: post
 title:  "Nginx met SPDY in Ubuntu"
 date:   2014-08-17 20:46:23
-categories: ruby nginx
+categories: ubuntu nginx
 ---
 
 SPDY is een verbetering van het HTTPS protocol en is zo'n 40% sneller. Encryptie
@@ -18,9 +18,23 @@ enkele grote sites die met SPDY serveren.
 
 Met de volgend instructies kan je via Nginx serveren met SPDY.
 
+## Nginx installeren
+
+Het team achter Nginx verzorgt een up to date PPA. Hierdoor is de nieuwste
+stabiele versie altijd beschikbaar, ook als de versie in de standard Ubuntu
+repository verouderd is.
+
+```bash
+# nginx stable ppa aan het systeem toevoegen
+sudo add-apt-repository ppa:nginx/stable
+# package list updaten
+sudo apt-get update
+```
+
 ---
 
-## lees meer
+### lees meer
 
 [SPDY is an experiment with protocols for the web](http://www.chromium.org/spdy)  
 [Can I use SPDY?](http://caniuse.com/#feat=spdy)  
+[Guide to Nginx + SSL + SPDY](https://www.mare-system.de/guide-to-nginx-ssl-spdy-hsts/)
