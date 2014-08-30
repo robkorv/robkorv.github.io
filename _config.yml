@@ -17,6 +17,7 @@ highlight: ruby
 redcarpet:
   extensions:
     - with_toc_data
+    - autolink
 
 # output settings
 permalink: /:title
