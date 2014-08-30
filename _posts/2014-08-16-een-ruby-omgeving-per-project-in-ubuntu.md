@@ -59,6 +59,12 @@ verschillende Ruby versies naast elkaar gebruikt kunnen worden.
 
 ### ruby installeren
 
+Installeer de volgende dependencies om ruby te kunnen builden met rbenv.
+
+```bash
+sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev
+```
+
 ```bash
 rbenv install -l
 # geeft alle installeerbare ruby versies weer
