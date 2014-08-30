@@ -40,6 +40,19 @@ Open http://localhost/ en de standaard `Welcome to nginx!` pagina zal laden.
 Als voorbeeld, zal de volgende configuratie instructies, de documentatie van
 [bootstrap](http://getbootstrap.com/) lokaal hosten met Nginx via SPDY.
 
+```
+# maak een www dir aan in home
+mkdir ~/www
+# ga in de www dir ~/www
+cd ~/www
+# download de documentatie zip
+wget https://github.com/twbs/bootstrap/archive/gh-pages.zip
+# pak de zip uit
+unzip gh-pages.zip
+# verwijder de gedownloade zip
+rm gh-pages.zip
+```
+
 ### Nginx configuratie layout in Ubuntu
 
 * `/etc/nginx/nginx.conf`
@@ -80,6 +93,34 @@ sudo service nginx restart
 #   ...done.
 # http://localhost/ zal nu weer default laden.
 ```
+
+### Nginx http virtual host
+
+Maak `/etc/nginx/sites-available/bootstrap` aan met de volgende inhoud.
+
+```nginx
+server {
+        # luister naar de default http port
+        listen 80;
+
+        # maak de site beschikbaar op http://bootstrap.localtest.me
+        server_name bootstrap.localtest.me;
+
+        # stel de root in op de bootstrap documentatie
+        location / {
+                root /home/robkorv/www/bootstrap-gh-pages;
+        }
+}
+```
+
+```
+# symlink de vhost naar sites-enabled
+sudo ln -s /etc/nginx/sites-available/bootstrap /etc/nginx/sites-enabled/
+# herstart nginx
+sudo service nginx restart
+```
+
+Open http://bootstrap.localtest.me.
 
 ---
 

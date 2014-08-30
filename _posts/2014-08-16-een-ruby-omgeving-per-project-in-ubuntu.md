@@ -66,10 +66,10 @@ sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libre
 ```
 
 ```bash
+# laat alle installeerbare ruby versies zien
 rbenv install -l
-# geeft alle installeerbare ruby versies weer
+# installeer ruby versie 2.1.2
 rbenv install 2.1.2
-# installeert ruby versie 2.1.2
 ```
 
 ### ruby versie gebruiken
@@ -79,12 +79,12 @@ gebruiken.
 
 ```bash
 cd mijn-app
+# laat de geinstalleerde ruby versies zien
 rbenv versions
-# geeft geinstalleerde ruby versies weer
-rbenv local 2.1.2
 # gebruik ruby versie 2.1.2 in deze en bovenliggende directories
+rbenv local 2.1.2
+# laat de actieve ruby in deze directory zien
 rbenv version
-# geeft de actieve ruby in deze directory weer
 ```
 
 Het command `rbenv local 2.1.2` creeërt een `.ruby-version` bestand in de huidige
