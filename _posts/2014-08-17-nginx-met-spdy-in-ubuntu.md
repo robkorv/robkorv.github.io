@@ -2,7 +2,7 @@
 layout: post
 title:  "Nginx met SPDY in Ubuntu"
 date:   2014-08-17 20:46:23
-categories: ubuntu nginx
+categories: ubuntu nginx spdy https virtualhost
 ---
 
 SPDY is een verbetering van het HTTPS protocol en is zo'n 40% sneller. Encryptie

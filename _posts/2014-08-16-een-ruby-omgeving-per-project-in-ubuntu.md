@@ -2,7 +2,7 @@
 layout: post
 title:  "Een ruby omgeving per project in Ubuntu"
 date:   2014-08-16 14:31:26
-categories: ruby ubuntu
+categories: ruby ubuntu rbenv bundler
 ---
 
 Met de volgende instructies kan een Ruby ontwikkel omgeving op directory niveau
