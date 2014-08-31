@@ -14,7 +14,7 @@ Build with [jekyll](https://github.com/jekyll/jekyll)
 git clone https://github.com/robkorv/robkorv-web.git
 cd robkorv-web
 bundle install
-jekyll serve
+bin/serve
 ```
 
 Open [localhost:4000](http://localhost:4000).
@@ -35,7 +35,7 @@ use [atom](https://github.com/atom/atom).
 git clone https://github.com/robkorv/robkorv-web.git
 cd robkorv-web
 bundle install --binstubs .bundle/bin
-guard
+bin/watch
 ```
 
 Open [localhost:4000](http://localhost:4000). When you edit source files the
