@@ -107,8 +107,12 @@ server {
         server_name bootstrap.localtest.me;
 
         # stel de root in op de bootstrap documentatie
+        root /home/robkorv/www/bootstrap-gh-pages;
+
         location / {
-                root /home/robkorv/www/bootstrap-gh-pages;
+                # Probeer de request als bestand te serveren, daarna
+                # als directory, daarna terugvallen op 404 foutcode.
+                try_files $uri $uri/ =404;
         }
 }
 ```
@@ -122,6 +126,125 @@ sudo service nginx restart
 
 Open http://bootstrap.localtest.me.
 
+### Nginx https virtual host
+
+Voeg het volgende toe in het http directive van `/etc/nginx/nginx.conf`. Hiermee
+wordt de cpu wat ontlast doordat er minder SSL handshakes zullen plaatsvinden.
+
+```nginx
+http {
+
+        ssl_session_cache shared:SSL:10m;
+        ssl_session_timeout 10m;
+
+        ##
+        # Basic Settings
+        ##
+
+```
+
+De bootstrap vhost ziet er voor https als volgt uit. Let op, deze gebruikt een
+zelf gesigneerde certificaat die door Ubuntu is gegenereerd. Gebruik deze
+oplossing niet in productie!
+
+```nginx
+server {
+        # luister naar de default http port
+        listen 80;
+        # maar redirect http naar https
+        if ($scheme = http) {
+                return 301 https://$server_name$request_uri;
+        }
+
+        # luister naar de https port met ssl
+        listen 443 ssl;
+
+        # ssl instellingen
+        ssl_certificate /etc/ssl/certs/ssl-cert-snakeoil.pem;
+        ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_prefer_server_ciphers on;
+        ssl_ciphers "EECDH+ECDSA+AESGCM EECDH+aRSA+AESGCM EECDH+ECDSA+SHA384 EECDH+ECDSA+SHA256 EECDH+aRSA+SHA384 EECDH+aRSA+SHA256 EECDH+aRSA+RC4 EECDH EDH+aRSA RC4 !aNULL !eNULL !LOW !3DES !MD5 !EXP !PSK !SRP !DSS";
+
+        # geef aan de client door dat alle requests over https moeten gaan
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
+
+        # maak de site beschikbaar op http://bootstrap.localtest.me
+        server_name bootstrap.localtest.me;
+
+        # stel de root in op de bootstrap documentatie
+        root /home/robkorv/www/bootstrap-gh-pages;
+
+        location / {
+                # Probeer de request als bestand te serveren, daarna
+                # als directory, daarna terugvallen op 404 foutcode.
+                try_files $uri $uri/ =404;
+        }
+}
+```
+
+Herstart Nginx met `sudo service nginx restart` en open
+https://bootstrap.localtest.me. Je krijgt een waarschuwing omdat het certificaat
+niet geauthoriseerd is.
+
+### Nginx SPDY virtual host
+
+Voeg `spdy` toe achter `ssl` in de
+[Nginx https virtual host](#nginx-https-virtual-host)
+
+```nginx
+server {
+        # luister naar de default http port
+        listen 80;
+        # maar redirect http naar https
+        if ($scheme = http) {
+                return 301 https://$server_name$request_uri;
+        }
+
+        # luister naar de https port met ssl
+        listen 443 ssl spdy;
+
+```
+
+De volledige Nginx SPDY virtual host ziet er als volgt uit.
+
+```nginx
+server {
+        # luister naar de default http port
+        listen 80;
+        # maar redirect http naar https
+        if ($scheme = http) {
+                return 301 https://$server_name$request_uri;
+        }
+
+        # luister naar de https port met ssl
+        listen 443 ssl spdy;
+
+        # ssl instellingen
+        ssl_certificate /etc/ssl/certs/ssl-cert-snakeoil.pem;
+        ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_prefer_server_ciphers on;
+        ssl_ciphers "EECDH+ECDSA+AESGCM EECDH+aRSA+AESGCM EECDH+ECDSA+SHA384 EECDH+ECDSA+SHA256 EECDH+aRSA+SHA384 EECDH+aRSA+SHA256 EECDH+aRSA+RC4 EECDH EDH+aRSA RC4 !aNULL !eNULL !LOW !3DES !MD5 !EXP !PSK !SRP !DSS";
+
+        # geef aan de client door dat alle requests over https moeten gaan
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
+
+        # maak de site beschikbaar op http://bootstrap.localtest.me
+        server_name bootstrap.localtest.me;
+
+        # stel de root in op de bootstrap documentatie
+        root /home/robkorv/www/bootstrap-gh-pages;
+
+        location / {
+                # Probeer de request als bestand te serveren, daarna
+                # als directory, daarna terugvallen op 404 foutcode.
+                try_files $uri $uri/ =404;
+        }
+}
+```
+
+
 ---
 
 ### lees meer
@@ -129,4 +252,5 @@ Open http://bootstrap.localtest.me.
 [SPDY is an experiment with protocols for the web](http://www.chromium.org/spdy)  
 [Can I use SPDY?](http://caniuse.com/#feat=spdy)  
 [Guide to Nginx + SSL + SPDY](https://www.mare-system.de/guide-to-nginx-ssl-spdy-hsts/)  
-[Nginx Configuration](http://wiki.nginx.org/Configuration)
+[Nginx Configuration](http://wiki.nginx.org/Configuration)  
+[NGINX SSL Termination](http://nginx.com/resources/admin-guide/nginx-ssl-termination/)
