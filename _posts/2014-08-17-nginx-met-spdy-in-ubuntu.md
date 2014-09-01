@@ -107,7 +107,7 @@ server {
         server_name bootstrap.localtest.me;
 
         # stel de root in op de bootstrap documentatie
-        root /home/robkorv/www/bootstrap-gh-pages;
+        root /home/mijnusernaam/www/bootstrap-gh-pages;
 
         location / {
                 # Probeer de request als bestand te serveren, daarna
@@ -173,7 +173,7 @@ server {
         server_name bootstrap.localtest.me;
 
         # stel de root in op de bootstrap documentatie
-        root /home/robkorv/www/bootstrap-gh-pages;
+        root /home/mijnusernaam/www/bootstrap-gh-pages;
 
         location / {
                 # Probeer de request als bestand te serveren, daarna
@@ -234,7 +234,7 @@ server {
         server_name bootstrap.localtest.me;
 
         # stel de root in op de bootstrap documentatie
-        root /home/robkorv/www/bootstrap-gh-pages;
+        root /home/mijnusernaam/www/bootstrap-gh-pages;
 
         location / {
                 # Probeer de request als bestand te serveren, daarna
