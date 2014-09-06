@@ -46,4 +46,5 @@ openen op bootstrap.localtest.me.
 ---
 
 ### lees meer
-[HTTP 301 - Wikipedia, the free encyclopedia](http://en.wikipedia.org/wiki/HTTP_301)
+[HTTP 301 - Wikipedia, the free encyclopedia](http://en.wikipedia.org/wiki/HTTP_301)  
+[Nginx http rewrite module - return](http://nginx.org/en/docs/http/ngx_http_rewrite_module.html#return)
