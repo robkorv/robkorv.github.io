@@ -63,6 +63,11 @@ rm gh-pages.zip
 * `/etc/nginx/sites-enabled/`
   * Symlinks naar virtual hosts uit `/etc/nginx/sites-available/`, een virtual
   host die hier gelinkt is wordt opgepakt door Nginx.
+* `/etc/nginx/conf.d/`
+  * De plek voor overige configuraties. Nginx pakt elke `*.conf` in deze directory
+  op. Zet hier instellingen neer om `nginx.conf` uit te breiden of te overulen.
+  Hierdoor zal een updaten van Nginx nooit voor een conflict zorgen in
+  `nginx.conf`.
 
 Zo wordt de `Welcome to nginx!` pagina door Nginx gehost.
 
@@ -117,7 +122,7 @@ server {
 }
 ```
 
-```
+```bash
 # symlink de vhost naar sites-enabled
 sudo ln -s /etc/nginx/sites-available/bootstrap /etc/nginx/sites-enabled/
 # herstart nginx
@@ -128,19 +133,12 @@ Open http://bootstrap.localtest.me.
 
 ### Nginx https virtual host
 
-Voeg het volgende toe in het http directive van `/etc/nginx/nginx.conf`. Hiermee
-wordt de cpu wat ontlast doordat er minder SSL handshakes zullen plaatsvinden.
+Voeg het volgende toe in `/etc/nginx/ssl_session.conf`. Hiermee wordt de cpu wat
+ontlast doordat er minder SSL handshakes zullen plaatsvinden.
 
 ```nginx
-http {
-
-        ssl_session_cache shared:SSL:10m;
-        ssl_session_timeout 10m;
-
-        ##
-        # Basic Settings
-        ##
-
+ssl_session_cache shared:SSL:10m;
+ssl_session_timeout 10m;
 ```
 
 De bootstrap vhost ziet er voor https als volgt uit. Let op, deze gebruikt een
