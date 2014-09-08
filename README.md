@@ -38,5 +38,5 @@ bundle install --binstubs .bundle/bin
 bin/watch
 ```
 
-Open [localhost:4000](http://localhost:4000). When you edit source files the
-browser automatically reloads. Use `q` followed by `enter` to leave guard.
+Open [localhost:4000](http://localhost:4000). When you edit source files you
+need to refresh your browser to see the changes.
