@@ -1,0 +1,23 @@
+{
+  "name": "robkorv-web",
+  "version": "1.0.0",
+  "description": "Website of Robbert Korving",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robkorv/robkorv-web.git"
+  },
+  "author": "Robbert Korving",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robkorv/robkorv-web/issues"
+  },
+  "homepage": "https://github.com/robkorv/robkorv-web"
+}

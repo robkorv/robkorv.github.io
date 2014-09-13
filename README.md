@@ -7,6 +7,7 @@ Build with [jekyll](https://github.com/jekyll/jekyll)
 
 * [ruby](https://github.com/ruby/ruby)
 * [bundler](https://github.com/bundler/bundler/)
+* [node](https://github.com/joyent/node)
 
 ## run
 
@@ -14,7 +15,8 @@ Build with [jekyll](https://github.com/jekyll/jekyll)
 git clone https://github.com/robkorv/robkorv-web.git
 cd robkorv-web
 bundle install
-bin/serve
+npm install
+gulp serve
 ```
 
 Open [localhost:4000](http://localhost:4000).
@@ -35,7 +37,8 @@ use [atom](https://github.com/atom/atom).
 git clone https://github.com/robkorv/robkorv-web.git
 cd robkorv-web
 bundle install --binstubs .bundle/bin
-bin/watch
+npm install
+gulp watch
 ```
 
 Open [localhost:4000](http://localhost:4000). When you edit source files you
