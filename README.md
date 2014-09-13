@@ -9,14 +9,14 @@ Build with [jekyll](https://github.com/jekyll/jekyll)
 * [bundler](https://github.com/bundler/bundler/)
 * [node](https://github.com/joyent/node)
 
-## run
+## build
 
 ```bash
 git clone https://github.com/robkorv/robkorv-web.git
 cd robkorv-web
 bundle install
 npm install
-gulp serve
+gulp build
 ```
 
 Open [localhost:4000](http://localhost:4000).
