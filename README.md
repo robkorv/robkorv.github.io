@@ -19,7 +19,8 @@ npm install
 gulp build
 ```
 
-Open [localhost:4000](http://localhost:4000).
+Compiled site is in `_site`.
+
 
 ## develop
 
