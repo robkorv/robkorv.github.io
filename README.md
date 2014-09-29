@@ -8,6 +8,7 @@ Build with [jekyll](https://github.com/jekyll/jekyll)
 * [ruby](https://github.com/ruby/ruby)
 * [bundler](https://github.com/bundler/bundler/)
 * [node](https://github.com/joyent/node)
+* [gulp](https://github.com/gulpjs/gulp/)
 
 ## build
 
