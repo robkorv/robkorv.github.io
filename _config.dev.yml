@@ -4,3 +4,7 @@ production: false
 # output settings
 sass:
     style: :nested
+
+# do render
+include:
+  - .md-writer

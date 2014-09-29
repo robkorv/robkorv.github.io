@@ -44,4 +44,19 @@ gulp watch
 ```
 
 Open [localhost:4000](http://localhost:4000). When you edit source files you
-need to refresh your browser to see the changes.
+need to refresh your browser to see the changes. Use `ctrl+c` to stop Gulp.
+
+The [markdown-writer](https://github.com/zhuochun/md-writer) for Atom is
+supported, use a config like the following to mimic my markdown-writer behaviour.
+
+```cson
+'markdown-writer':
+  'newPostFileName': '{year}-{month}-{day}-{title}{extension}'
+  'sitePostsDir': '_posts'
+  'fileExtension': '.md'
+  'siteLocalDir': '/path/to/robkorv-web'
+  'siteEngine': 'jekyll'
+  'urlForCategories': 'http://localhost:3000/.md-writer/categories.json'
+  'urlForPosts': 'http://localhost:3000/.md-writer/posts.json'
+  'urlForTags': 'http://localhost:3000/.md-writer/tags.json'
+```
