@@ -22,15 +22,21 @@ vragen voor welke situatie deze wordt gebruikt
 sudo tasksel install mail-server
 ```
 
+![e-mailserverconfiguratie](/img/2014-09-30-een-uitgaande-mailserver-opzetten-in-ubuntu_01.png)
+
 Kies tijdens de installatie voor `Internetsite`. Vervolg de wizard.
+
+![E-mail-naam](/img/2014-09-30-een-uitgaande-mailserver-opzetten-in-ubuntu_02.png)
 
 Let wel op dat als de mailserver een bepaald domein vertegenwoordigd dit goed wordt
 ingesteld. Als dit niet goed wordt ingesteld zullen de mails altijd in de spambox
 van de ontvanger terecht komen. Voor een locale ontwikkel server kan je de al aanwezige
 instellingen gebruiken, kijk dan wel in je spambox als je mail verwacht.
 
+![self-signed certificate aanmaken](/img/2014-09-30-een-uitgaande-mailserver-opzetten-in-ubuntu_03.png)
+
 Maak een self-signed certificate aan, de mailserver wordt niet extern benaderd maar
-is wel een basis instelling.
+een certificaat is wel nodig voor de basis instelling.
 
 ## Testen
 
@@ -40,6 +46,10 @@ te wijzigen.
 ```
 echo "Dit is de inhoud van een testmail" | mail -s "Dit is het onderwerp van de testmail" "aan@mailadres"
 ```
+
+Kijk in je spambox!
+
+![spam vanwege ontwikkel instelling](/img/2014-09-30-een-uitgaande-mailserver-opzetten-in-ubuntu_04.png)
 
 ---
 
