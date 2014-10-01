@@ -5,11 +5,16 @@ var runSequence = require('run-sequence');
 var optipng = require('gulp-optipng');
 
 gulp.task('build', function(callback){
-  runSequence(['jekyll-build'], callback);
+  runSequence('jekyll-build', 'optipng', callback);
 });
 
 gulp.task('jekyll-build', function(callback){
   spawn('jekyll', ['build'], {stdio: 'inherit'}).on('close', callback);
+});
+
+gulp.task('optipng', function () {
+  var options = ['-o2'];
+  return gulp.src('_site/img/*.png').pipe(optipng(options)).pipe(gulp.dest('_site/img/'));
 });
 
 gulp.task('jekyll-build-dev', function(callback){
