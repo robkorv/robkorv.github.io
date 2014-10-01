@@ -13,7 +13,7 @@ gulp.task('jekyll-build', function(callback){
 });
 
 gulp.task('optipng', function () {
-  var options = ['-o2'];
+  var options = ['-o7'];
   return gulp.src('_site/img/*.png').pipe(optipng(options)).pipe(gulp.dest('_site/img/'));
 });
 
