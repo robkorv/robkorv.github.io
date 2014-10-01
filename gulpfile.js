@@ -2,12 +2,17 @@ var gulp = require('gulp');
 var spawn = require('child_process').spawn;
 var browserSync = require('browser-sync');
 var runSequence = require('run-sequence');
+var optipng = require('gulp-optipng');
 
 gulp.task('build', function(callback){
+  runSequence(['jekyll-build'], callback);
+});
+
+gulp.task('jekyll-build', function(callback){
   spawn('jekyll', ['build'], {stdio: 'inherit'}).on('close', callback);
 });
 
-gulp.task('build-dev', function(callback){
+gulp.task('jekyll-build-dev', function(callback){
   return spawn('jekyll', ['build', '--config=_config.yml,_config.dev.yml', '-q'],
     {stdio: 'inherit'}).on('close', callback);
 });
@@ -23,9 +28,9 @@ gulp.task('browserSync', function(){
   });
 });
 
-gulp.task('watch', ['build-dev', 'browserSync'], function(){
+gulp.task('watch', ['jekyll-build-dev', 'browserSync'], function(){
   gulp.watch(['**/*', '!_site/**/*'], function(){
-    runSequence(['build-dev'], function(){
+    runSequence(['jekyll-build-dev'], function(){
       browserSync.reload();
     });
   });
