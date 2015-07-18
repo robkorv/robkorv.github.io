@@ -1,0 +1,14 @@
+{
+    "env": {
+      "node" : true,
+      "amd"  : true
+    },
+    "rules": {
+        "quotes"          : [1, "single"],
+        "no-multi-spaces" : [
+            1, {"exceptions" : {"VariableDeclarator" : true}}
+        ],
+        "max-len"         : [1, 79],
+        "complexity"      : [1, 5]
+    }
+  }
