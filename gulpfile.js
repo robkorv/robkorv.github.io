@@ -33,9 +33,6 @@ gulp.task('jekyll-build-dev', function(callback){
 gulp.task('browserSync', function(){
     'use strict';
     browserSync({
-        online: false,
-        open: false,
-        notify: false,
         server: {
             baseDir: '_site'
         }

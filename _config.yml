@@ -6,7 +6,7 @@ description: >
     Dit is het kladblok van Robbert Korving, ik plaats hier aantekeningen voor
     open-source ontwikkel avonturen.
 baseurl: ""
-url: "https://robkorv.nl"
+url: https://robkorv.nl
 twitter_username: robkorv
 github_username:  robkorv
 production: true
@@ -26,8 +26,10 @@ sass:
 
 # do not render
 exclude:
-  - README.md
+  - node_modules
   - Gemfile
   - Gemfile.lock
-  - bin
   - LICENSE
+  - README.md
+  - gulpfile.js
+  - package.json

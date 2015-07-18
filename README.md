@@ -33,7 +33,8 @@ ruby environment. The following rbenv plugins are highly recommended:
 [ruby-build](https://github.com/sstephenson/ruby-build)
 
 Use an editor that has support for [editorconfig](http://editorconfig.org/). I
-use [atom](https://github.com/atom/atom).
+use [Sublime 3](http://www.sublimetext.com/3).
+[Atom](https://github.com/atom/atom) is also very good and free.
 
 ```bash
 git clone https://github.com/robkorv/robkorv-web.git
@@ -41,22 +42,4 @@ cd robkorv-web
 bundle install --binstubs .bundle/bin
 npm install
 gulp watch
-```
-
-Open [localhost:4000](http://localhost:4000). When you edit source files you
-need to refresh your browser to see the changes. Use `ctrl+c` to stop Gulp.
-
-The [markdown-writer](https://github.com/zhuochun/md-writer) for Atom is
-supported, use a config like the following to mimic my markdown-writer behaviour.
-
-```cson
-'markdown-writer':
-  'newPostFileName': '{year}-{month}-{day}-{title}{extension}'
-  'sitePostsDir': '_posts'
-  'fileExtension': '.md'
-  'siteLocalDir': '/path/to/robkorv-web'
-  'siteEngine': 'jekyll'
-  'urlForCategories': 'http://localhost:3000/.md-writer/categories.json'
-  'urlForPosts': 'http://localhost:3000/.md-writer/posts.json'
-  'urlForTags': 'http://localhost:3000/.md-writer/tags.json'
 ```
