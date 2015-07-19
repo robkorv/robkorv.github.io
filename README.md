@@ -13,8 +13,8 @@ Build with [jekyll](https://github.com/jekyll/jekyll)
 ## build
 
 ```bash
-git clone https://github.com/robkorv/robkorv-web.git
-cd robkorv-web
+git clone git@github.com:robkorv/robkorv.github.io.git
+cd robkorv.github.io
 bundle install
 npm install
 gulp build
